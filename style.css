@@ -1,0 +1,87 @@
+:root {
+    --scale: 20px;
+    --top-first-row: calc(var(--scale) * 1.95);
+    --top-second-row: calc(var(--scale) * 5.8);
+    --left-horizontal: calc(var(--scale) * 0.8);
+    --left-first-column: calc(var(--scale) * -1);
+    --right-second-column: 0px;
+}
+
+html {
+    --s: 100px; /* control the size*/
+    --c1: #9282ab;
+    --c2: #1d263a;
+    
+    --_g: 
+       var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
+       var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+    background:
+      radial-gradient(100% 100% at 100% 0,var(--c1) 4%,var(--_g),#0008 96%,#0000),
+      radial-gradient(100% 100% at 0 100%,#0000, #0008 4%,var(--_g),var(--c1) 96%)
+      var(--c1);
+    background-size: var(--s) var(--s);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    background-color: royalblue;
+    border-radius: 10px;
+}
+
+.number {
+    position: relative;
+    height: calc(var(--scale) * 9);
+    width: calc(var(--scale) * 6.30);
+}
+
+.segment {
+    position: absolute;
+    height: var(--scale);
+	/* fill:rgba(243, 120, 120, 0.097) */
+}
+
+.segment:nth-child(1) {
+    left: var(--left-horizontal);
+}
+
+.segment:nth-child(2) {
+    transform: rotate(90deg);
+    right: var(--right-second-column);
+    top: var(--top-first-row);
+}
+
+.segment:nth-child(3) {
+    transform: rotate(90deg);
+    right: var(--right-second-column);
+    top: var(--top-second-row);
+}
+
+.segment:nth-child(4) {
+    left: var(--left-horizontal);
+    top: calc(var(--scale) * 7.75);
+}
+
+.segment:nth-child(5) {
+    transform: rotate(90deg);
+    top: var(--top-second-row);
+    left: var(--left-first-column);
+}
+
+.segment:nth-child(6) {
+    left: var(--left-horizontal);
+    top: calc(var(--scale) * 3.90);
+}
+
+.segment:nth-child(7) {
+    transform: rotate(90deg);
+    top: var(--top-first-row);
+    left: var(--left-first-column);
+}
