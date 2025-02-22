@@ -7,6 +7,10 @@
     --right-second-column: 0px;
 }
 
+* {
+    user-select: none;
+}
+
 html {
     --s: 100px; /* control the size*/
     --c1: #9282ab;
@@ -94,6 +98,30 @@ main {
     transform: rotate(90deg);
     top: var(--top-first-row);
     left: var(--left-first-column);
+}
+
+.colon {
+    position: relative;
+    height: var(--scale);
+    width: var(--scale);
+}
+
+.dot {
+    position: absolute;
+    background-color: rgb(224, 55, 55);
+    transform: rotate(45deg);
+    height: var(--scale);
+    width: var(--scale);
+}
+
+.dot:first-child {
+    top: calc(var(--scale) * 1.90);
+    left: calc(var(--scale) * -0.40);
+}
+
+.dot:last-child {
+    top: calc(var(--scale) * 5.80);
+    left: calc(var(--scale) * -0.40);
 }
 
 @keyframes glow {
