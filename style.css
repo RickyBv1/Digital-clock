@@ -42,10 +42,15 @@ main {
     width: calc(var(--scale) * 6.30);
 }
 
+.on {
+    fill: rgb(252, 50, 50);
+    box-shadow: inset 0px 0px 15px 2px rgba(255, 0, 0, 0.65);
+}
+
 .segment {
     position: absolute;
     height: var(--scale);
-	/* fill:rgba(243, 120, 120, 0.097) */
+	fill:rgba(243, 120, 120, 0.097)
 }
 
 .segment:nth-child(1) {
